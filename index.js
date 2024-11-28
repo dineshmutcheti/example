@@ -17,6 +17,10 @@ const pool = new Pool({
   database: process.env.DB_NAME,
 });
 
+app.get("/",(req,res) => {
+    res.send("server is running!")
+})
+
 // Endpoint to fetch all users from the database
 app.get("/users", async (req, res) => {
   try {
